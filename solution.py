@@ -31,6 +31,13 @@ def fizz_buzz(begin, end):
     return ' '.join(result)
 
 
+def is_palindrome(string):
+    for i in range(len(string) // 2):
+        if string[i] != string[-1 - i]:
+            return False
+    return True
+
+
 if __name__ == "__main__":
     """
     Модуль содержит функции-решения задач на Hexlet.io по специализации Python-программист.
