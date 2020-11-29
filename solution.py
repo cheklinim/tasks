@@ -75,6 +75,14 @@ def is_inclined(x):
     return False
 
 
+def rotate_left(triple):
+    return triple[1], triple[2], triple[0]
+
+
+def rotate_right(triple):
+    return triple[2], triple[0], triple[1]
+
+
 if __name__ == "__main__":
     """
     Модуль содержит функции-решения задач на Hexlet.io по специализации Python-программист.
