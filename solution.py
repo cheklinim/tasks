@@ -38,6 +38,43 @@ def is_palindrome(string):
     return True
 
 
+def is_degenerated(x):
+    """
+    Функция возвращает истину, если отрезок вырожден в точку.
+    На вход подаются координаты двух точек - кортежи a = (x1, y1), b = (x2, y2)
+    """
+    if x[0][0] == x[1][0] and x[0][1] == x[1][1]:
+        return True
+    return False
+
+
+def is_vertical(x):
+    """
+    Функция возвращает истину, если отрезок вертикальный
+    """
+    if x[0][0] == x[1][0] and x[0][1] != x[1][1]:
+        return True
+    return False
+
+
+def is_horizontal(x):
+    """
+    Функция возвращает истину, если отрезок горизонтальный
+    """
+    if x[0][1] == x[1][1] and x[0][0] != x[1][0]:
+        return True
+    return False
+
+
+def is_inclined(x):
+    """
+    Функция возвращает истину, если отрезок наклонный
+    """
+    if x[0][0] != x[1][0] and x[0][1] != x[1][1]:
+        return True
+    return False
+
+
 if __name__ == "__main__":
     """
     Модуль содержит функции-решения задач на Hexlet.io по специализации Python-программист.
